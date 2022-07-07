@@ -17,7 +17,6 @@ var groupBy = function (xs, key) {
     return rv;
   }, {});
 };
-
 //  grouped array
 // {"Alan B": [ {...}, {...}, {...},], "Mary C": [ {...}, {...}, {...},] }
 const grouped = groupBy(data.workedHours, 'employee');
@@ -56,11 +55,11 @@ export default {
 
 <template>
   <div
-    class="h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-hidden"
   >
-    <div class="flex flex-row items-center p-20 justify-center">
+    <div class="flex flex-wrap items-center p-20 justify-center">
       <div
-        class="mb-20 flex flex-col p-20 mr-20 w-2/5 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-blue-200 hover:border-gray-700"
+        class="mb-20 flex flex-col p-20 xs:w-2/5 md:mr-20 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-blue-200 hover:border-gray-700"
         v-for="item in newArray"
         :key="item.name"
       >
